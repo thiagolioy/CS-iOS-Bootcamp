@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		398574521B8B587A0036C3B7 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 398574511B8B587A0036C3B7 /* Client.m */; };
+		398574551B8B60EC0036C3B7 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398574541B8B60EC0036C3B7 /* ListTableViewController.m */; };
+		398574581B8B60FD0036C3B7 /* GridCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398574571B8B60FD0036C3B7 /* GridCollectionViewController.m */; };
 		39E3D71D1B879641005043D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E3D71C1B879641005043D8 /* main.m */; };
 		39E3D7201B879641005043D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E3D71F1B879641005043D8 /* AppDelegate.m */; };
-		39E3D7231B879641005043D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E3D7221B879641005043D8 /* ViewController.m */; };
 		39E3D7261B879641005043D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E3D7241B879641005043D8 /* Main.storyboard */; };
 		39E3D7281B879641005043D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E3D7271B879641005043D8 /* Images.xcassets */; };
 		39E3D72B1B879641005043D8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39E3D7291B879641005043D8 /* LaunchScreen.xib */; };
@@ -33,13 +35,18 @@
 
 /* Begin PBXFileReference section */
 		1C4A116932AB728C8166E37F /* libPods-Wattpad-appTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wattpad-appTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28195AB2FA2650273DC30209 /* Pods-Wattpad-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad-appTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wattpad-appTests/Pods-Wattpad-appTests.release.xcconfig"; sourceTree = "<group>"; };
+		398574501B8B587A0036C3B7 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		398574511B8B587A0036C3B7 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
+		398574531B8B60EC0036C3B7 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		398574541B8B60EC0036C3B7 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
+		398574561B8B60FD0036C3B7 /* GridCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCollectionViewController.h; sourceTree = "<group>"; };
+		398574571B8B60FD0036C3B7 /* GridCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCollectionViewController.m; sourceTree = "<group>"; };
 		39E3D7171B879641005043D8 /* Wattpad-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wattpad-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E3D71B1B879641005043D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E3D71C1B879641005043D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39E3D71E1B879641005043D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		39E3D71F1B879641005043D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		39E3D7211B879641005043D8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		39E3D7221B879641005043D8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		39E3D7251B879641005043D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39E3D7271B879641005043D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		39E3D72A1B879641005043D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -88,6 +95,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3985744F1B8B58660036C3B7 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				398574501B8B587A0036C3B7 /* Client.h */,
+				398574511B8B587A0036C3B7 /* Client.m */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		398574591B8B61010036C3B7 /* List Controller */ = {
+			isa = PBXGroup;
+			children = (
+				398574531B8B60EC0036C3B7 /* ListTableViewController.h */,
+				398574541B8B60EC0036C3B7 /* ListTableViewController.m */,
+			);
+			name = "List Controller";
+			sourceTree = "<group>";
+		};
+		3985745A1B8B610B0036C3B7 /* Grid Controller */ = {
+			isa = PBXGroup;
+			children = (
+				398574561B8B60FD0036C3B7 /* GridCollectionViewController.h */,
+				398574571B8B60FD0036C3B7 /* GridCollectionViewController.m */,
+			);
+			name = "Grid Controller";
+			sourceTree = "<group>";
+		};
 		39E3D70E1B879641005043D8 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +145,7 @@
 		39E3D7191B879641005043D8 /* Wattpad-app */ = {
 			isa = PBXGroup;
 			children = (
+				3985744F1B8B58660036C3B7 /* Client */,
 				39E3D7431B879A70005043D8 /* AppDelegate */,
 				39E3D7421B879A65005043D8 /* Model */,
 				39E3D7401B879A5A005043D8 /* View */,
@@ -159,8 +194,8 @@
 		39E3D7411B879A5F005043D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				39E3D7211B879641005043D8 /* ViewController.h */,
-				39E3D7221B879641005043D8 /* ViewController.m */,
+				398574591B8B61010036C3B7 /* List Controller */,
+				3985745A1B8B610B0036C3B7 /* Grid Controller */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -368,9 +403,12 @@
 				39E3D7231B879641005043D8 /* ViewController.m in Sources */,
 				7BB57A531B8B5A3800A2C357 /* Story.m in Sources */,
 				7BB57A501B8B54A300A2C357 /* Categories.m in Sources */,
+				398574581B8B60FD0036C3B7 /* GridCollectionViewController.m in Sources */,
 				39E3D7201B879641005043D8 /* AppDelegate.m in Sources */,
+				398574521B8B587A0036C3B7 /* Client.m in Sources */,
 				39E3D71D1B879641005043D8 /* main.m in Sources */,
 				7BB57A561B8B754C00A2C357 /* Stories.m in Sources */,
+				398574551B8B60EC0036C3B7 /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
