@@ -28,7 +28,7 @@ static NSString *const kAPISecret = @"rIezAPvXCOOVBfoVtiDv85DMHXxwqHxrO1uIP7cQxz
         
         _sharedInstance = [[self alloc] initWithBaseURL:[NSURL URLWithString:apiBaseUrl]];
         _sharedInstance.requestSerializer = [AFJSONRequestSerializer serializer];
-        [_sharedInstance.requestSerializer setValue:@"Authorization" forKey:apiKey];
+        [_sharedInstance.requestSerializer setValue:apiKey forHTTPHeaderField:@"Authorization"];
         
         _sharedInstance.responseSerializer = [AFJSONResponseSerializer serializer];
         _sharedInstance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", nil];
