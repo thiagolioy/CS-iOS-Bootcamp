@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		398574521B8B587A0036C3B7 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 398574511B8B587A0036C3B7 /* Client.m */; };
 		39E3D71D1B879641005043D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E3D71C1B879641005043D8 /* main.m */; };
 		39E3D7201B879641005043D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E3D71F1B879641005043D8 /* AppDelegate.m */; };
 		39E3D7231B879641005043D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E3D7221B879641005043D8 /* ViewController.m */; };
@@ -14,6 +15,8 @@
 		39E3D7281B879641005043D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E3D7271B879641005043D8 /* Images.xcassets */; };
 		39E3D72B1B879641005043D8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39E3D7291B879641005043D8 /* LaunchScreen.xib */; };
 		39E3D7371B879641005043D8 /* Wattpad_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E3D7361B879641005043D8 /* Wattpad_appTests.m */; };
+		668DF54F14B258506C31A48F /* libPods-Wattpad-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E744342D9C5894CD7990925D /* libPods-Wattpad-app.a */; };
+		BB72F3E8F5F95F3219FA891E /* libPods-Wattpad-appTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AC24A653DECDB343F52449 /* libPods-Wattpad-appTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28195AB2FA2650273DC30209 /* Pods-Wattpad-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad-appTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wattpad-appTests/Pods-Wattpad-appTests.release.xcconfig"; sourceTree = "<group>"; };
+		398574501B8B587A0036C3B7 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		398574511B8B587A0036C3B7 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
 		39E3D7171B879641005043D8 /* Wattpad-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wattpad-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E3D71B1B879641005043D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E3D71C1B879641005043D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +46,11 @@
 		39E3D7301B879641005043D8 /* Wattpad-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wattpad-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E3D7351B879641005043D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E3D7361B879641005043D8 /* Wattpad_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Wattpad_appTests.m; sourceTree = "<group>"; };
+		44AC24A653DECDB343F52449 /* libPods-Wattpad-appTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wattpad-appTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BB848D97940B9FB6A8ECB19 /* Pods-Wattpad-appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad-appTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wattpad-appTests/Pods-Wattpad-appTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B62DE5B3F31F3648ECC1CD51 /* Pods-Wattpad-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wattpad-app/Pods-Wattpad-app.debug.xcconfig"; sourceTree = "<group>"; };
+		DBF3F2B1892318BA95A7C726 /* Pods-Wattpad-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wattpad-app/Pods-Wattpad-app.release.xcconfig"; sourceTree = "<group>"; };
+		E744342D9C5894CD7990925D /* libPods-Wattpad-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wattpad-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668DF54F14B258506C31A48F /* libPods-Wattpad-app.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +66,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB72F3E8F5F95F3219FA891E /* libPods-Wattpad-appTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15A99637B88E7E5DEAADF1E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B62DE5B3F31F3648ECC1CD51 /* Pods-Wattpad-app.debug.xcconfig */,
+				DBF3F2B1892318BA95A7C726 /* Pods-Wattpad-app.release.xcconfig */,
+				7BB848D97940B9FB6A8ECB19 /* Pods-Wattpad-appTests.debug.xcconfig */,
+				28195AB2FA2650273DC30209 /* Pods-Wattpad-appTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1A3A9AB49D73C25F73BC5E1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E744342D9C5894CD7990925D /* libPods-Wattpad-app.a */,
+				44AC24A653DECDB343F52449 /* libPods-Wattpad-appTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3985744F1B8B58660036C3B7 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				398574501B8B587A0036C3B7 /* Client.h */,
+				398574511B8B587A0036C3B7 /* Client.m */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
 		39E3D70E1B879641005043D8 = {
 			isa = PBXGroup;
 			children = (
 				39E3D7191B879641005043D8 /* Wattpad-app */,
 				39E3D7331B879641005043D8 /* Wattpad-appTests */,
 				39E3D7181B879641005043D8 /* Products */,
+				15A99637B88E7E5DEAADF1E2 /* Pods */,
+				1A3A9AB49D73C25F73BC5E1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +125,7 @@
 		39E3D7191B879641005043D8 /* Wattpad-app */ = {
 			isa = PBXGroup;
 			children = (
+				3985744F1B8B58660036C3B7 /* Client */,
 				39E3D7431B879A70005043D8 /* AppDelegate */,
 				39E3D7421B879A65005043D8 /* Model */,
 				39E3D7401B879A5A005043D8 /* View */,
@@ -158,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39E3D73A1B879641005043D8 /* Build configuration list for PBXNativeTarget "Wattpad-app" */;
 			buildPhases = (
+				C862A17BD43B6BCA91C76287 /* Check Pods Manifest.lock */,
 				39E3D7131B879641005043D8 /* Sources */,
 				39E3D7141B879641005043D8 /* Frameworks */,
 				39E3D7151B879641005043D8 /* Resources */,
+				000F76FBC3FBB65D953D3F97 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39E3D73D1B879641005043D8 /* Build configuration list for PBXNativeTarget "Wattpad-appTests" */;
 			buildPhases = (
+				D20694DB93F83F1DABE90FB7 /* Check Pods Manifest.lock */,
 				39E3D72C1B879641005043D8 /* Sources */,
 				39E3D72D1B879641005043D8 /* Frameworks */,
 				39E3D72E1B879641005043D8 /* Resources */,
+				A0B7161642EC83618C7C3EAB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,6 +295,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		000F76FBC3FBB65D953D3F97 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wattpad-app/Pods-Wattpad-app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0B7161642EC83618C7C3EAB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wattpad-appTests/Pods-Wattpad-appTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C862A17BD43B6BCA91C76287 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D20694DB93F83F1DABE90FB7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		39E3D7131B879641005043D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -253,6 +365,7 @@
 			files = (
 				39E3D7231B879641005043D8 /* ViewController.m in Sources */,
 				39E3D7201B879641005043D8 /* AppDelegate.m in Sources */,
+				398574521B8B587A0036C3B7 /* Client.m in Sources */,
 				39E3D71D1B879641005043D8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +492,7 @@
 		};
 		39E3D73B1B879641005043D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B62DE5B3F31F3648ECC1CD51 /* Pods-Wattpad-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Wattpad-app/Info.plist";
@@ -389,6 +503,7 @@
 		};
 		39E3D73C1B879641005043D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBF3F2B1892318BA95A7C726 /* Pods-Wattpad-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Wattpad-app/Info.plist";
@@ -399,6 +514,7 @@
 		};
 		39E3D73E1B879641005043D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BB848D97940B9FB6A8ECB19 /* Pods-Wattpad-appTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -418,6 +534,7 @@
 		};
 		39E3D73F1B879641005043D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28195AB2FA2650273DC30209 /* Pods-Wattpad-appTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -450,6 +567,7 @@
 				39E3D73C1B879641005043D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39E3D73D1B879641005043D8 /* Build configuration list for PBXNativeTarget "Wattpad-appTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +576,7 @@
 				39E3D73F1B879641005043D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
