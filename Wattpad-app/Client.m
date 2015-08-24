@@ -7,6 +7,7 @@
 //
 
 #import "Client.h"
+#import "Categories.h"
 
 @implementation Client
 
@@ -38,6 +39,27 @@ static NSString *const kAPISecret = @"rIezAPvXCOOVBfoVtiDv85DMHXxwqHxrO1uIP7cQxz
     });
     
     return _sharedInstance;
+}
+
+-(void)getWattPadCategoriesWithSuccess:(void (^)(NSArray *categories))success
+                            andFailure:(void (^)(NSError *error))failure {
+    
+    [self GET:kPathCategories parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSError *error;
+        
+        NSMutableArray *categoriesArray = [NSMutableArray arrayWithArray:[MTLJSONAdapter modelsOfClass:[Categories class] fromJSONArray:responseObject error:&error]];
+        
+        if (success) {
+            success(categoriesArray);
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"%@", error.description);
+    
+    }];
+    
 }
 
 @end

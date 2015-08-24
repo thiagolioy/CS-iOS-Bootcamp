@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Categories.h"
-#import <Mantle.h>
+#import "Mantle.h"
 
 @interface Story : MTLModel <MTLJSONSerializing>
 
