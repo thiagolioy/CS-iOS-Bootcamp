@@ -24,29 +24,29 @@ PODS:
   - Mantle (2.0.4):
     - Mantle/extobjc (= 2.0.4)
   - Mantle/extobjc (2.0.4)
-  - OCMock (3.1.3)
-  - PageMenu (1.2.8)
+  - OCMock (3.1.2)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
   - Specta (1.0.3)
+  - TLJsonFactory (0.1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - Expecta (~> 1.0.0)
   - Mantle
   - OCMock
-  - PageMenu
   - SDWebImage (~> 3.7)
   - Specta (~> 1.0)
+  - TLJsonFactory
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
   Mantle: 6bee68168423948be0c0c5924832bf3af188e099
-  OCMock: 5f490f8295325d83ee52755db6413e0185a0599e
-  PageMenu: 703e82e173f54a4626ab88fcdca7703ee52e0cbe
+  OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   Specta: cf3e4188cf35375c3ee2cd03f8db8f1f4ef98234
+  TLJsonFactory: 3aeb73712e192997f76a11b75bc7600cdb4f5b75
 
 COCOAPODS: 0.38.2
