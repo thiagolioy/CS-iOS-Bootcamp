@@ -48,7 +48,7 @@ static NSString *const kAPISecret = @"rIezAPvXCOOVBfoVtiDv85DMHXxwqHxrO1uIP7cQxz
         
         NSError *error;
         
-        NSMutableArray *categoriesArray = [NSMutableArray arrayWithArray:[MTLJSONAdapter modelsOfClass:[Categories class] fromJSONArray:responseObject error:&error]];
+        NSMutableArray *categoriesArray = [NSMutableArray arrayWithArray:[MTLJSONAdapter modelsOfClass:[Categories class] fromJSONArray:[responseObject objectForKey:@"categories"] error:&error]];
         
         if (success) {
             success(categoriesArray);

@@ -21,4 +21,5 @@
     return [MTLJSONAdapter arrayTransformerWithModelClass:[Story class]];
 }
 
+
 @end

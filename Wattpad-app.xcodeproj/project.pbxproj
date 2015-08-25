@@ -20,6 +20,8 @@
 		7BB57A501B8B54A300A2C357 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB57A4F1B8B54A300A2C357 /* Categories.m */; };
 		7BB57A531B8B5A3800A2C357 /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB57A521B8B5A3800A2C357 /* Story.m */; };
 		7BB57A561B8B754C00A2C357 /* Stories.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB57A551B8B754C00A2C357 /* Stories.m */; };
+		7BD69FFC1B8CB16B0048B687 /* TableViewDataSourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD69FFB1B8CB16B0048B687 /* TableViewDataSourceDelegate.m */; };
+		7BD69FFF1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD69FFE1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m */; };
 		C6E35C42C28565A4BA5A1C7F /* Pods_Wattpad_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287C9D436231DBD8F3053E50 /* Pods_Wattpad_app.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,10 @@
 		7BB57A521B8B5A3800A2C357 /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 		7BB57A541B8B754C00A2C357 /* Stories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stories.h; sourceTree = "<group>"; };
 		7BB57A551B8B754C00A2C357 /* Stories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stories.m; sourceTree = "<group>"; };
+		7BD69FFA1B8CB16B0048B687 /* TableViewDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDataSourceDelegate.h; sourceTree = "<group>"; };
+		7BD69FFB1B8CB16B0048B687 /* TableViewDataSourceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSourceDelegate.m; sourceTree = "<group>"; };
+		7BD69FFD1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDatasourceAndDelegate.h; sourceTree = "<group>"; };
+		7BD69FFE1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDatasourceAndDelegate.m; sourceTree = "<group>"; };
 		85CD79BA77A4E8257B657639 /* Pods-Wattpad-appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad-appTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wattpad-appTests/Pods-Wattpad-appTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0322953625E8DAF4E7F3FCE /* Pods-Wattpad-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wattpad-app/Pods-Wattpad-app.release.xcconfig"; sourceTree = "<group>"; };
 		E70734C0C813FED0383C7EF0 /* Pods-Wattpad-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad-appTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wattpad-appTests/Pods-Wattpad-appTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 		398574591B8B61010036C3B7 /* List Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7BD69FF61B8CAFF20048B687 /* DataSourceDelegate */,
 				398574531B8B60EC0036C3B7 /* ListTableViewController.h */,
 				398574541B8B60EC0036C3B7 /* ListTableViewController.m */,
 			);
@@ -219,6 +226,17 @@
 				39E3D71F1B879641005043D8 /* AppDelegate.m */,
 			);
 			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7BD69FF61B8CAFF20048B687 /* DataSourceDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7BD69FFA1B8CB16B0048B687 /* TableViewDataSourceDelegate.h */,
+				7BD69FFB1B8CB16B0048B687 /* TableViewDataSourceDelegate.m */,
+				7BD69FFD1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.h */,
+				7BD69FFE1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m */,
+			);
+			name = DataSourceDelegate;
 			sourceTree = "<group>";
 		};
 		808FE0716CFEBDD92182E9F5 /* Pods */ = {
@@ -433,12 +451,14 @@
 			files = (
 				7BB57A531B8B5A3800A2C357 /* Story.m in Sources */,
 				7BB57A501B8B54A300A2C357 /* Categories.m in Sources */,
+				7BD69FFF1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m in Sources */,
 				398574581B8B60FD0036C3B7 /* GridCollectionViewController.m in Sources */,
 				39E3D7201B879641005043D8 /* AppDelegate.m in Sources */,
 				398574521B8B587A0036C3B7 /* Client.m in Sources */,
 				39E3D71D1B879641005043D8 /* main.m in Sources */,
 				7BB57A561B8B754C00A2C357 /* Stories.m in Sources */,
 				398574551B8B60EC0036C3B7 /* ListTableViewController.m in Sources */,
+				7BD69FFC1B8CB16B0048B687 /* TableViewDataSourceDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

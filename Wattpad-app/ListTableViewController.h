@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListTableViewController : UITableViewController
-
+@interface ListTableViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
