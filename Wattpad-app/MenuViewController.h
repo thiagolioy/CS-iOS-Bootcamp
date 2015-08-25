@@ -1,5 +1,6 @@
+
 //
-//  GridCollectionViewController.h
+//  MenuViewController.h
 //  Wattpad-app
 //
 //  Created by Jean Vinge on 24/08/15.
@@ -7,7 +8,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HMSegmentedControl.h"
 
-@interface GridCollectionViewController : UIViewController
+@interface MenuViewController : UIViewController
 
 @end

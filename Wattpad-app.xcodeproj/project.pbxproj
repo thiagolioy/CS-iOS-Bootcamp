@@ -28,6 +28,8 @@
 		7BD6A0011B8CED250048B687 /* stories.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD6A0001B8CED250048B687 /* stories.json */; };
 		7BD6A0031B8CED970048B687 /* story.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD6A0021B8CED970048B687 /* story.json */; };
 		7BD6A0091B8CEEDA0048B687 /* StoryCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6A0081B8CEEDA0048B687 /* StoryCategories.m */; };
+		7BF24C1B1B8D0E5800C722D9 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF24C181B8D0E5800C722D9 /* ContainerViewController.m */; };
+		7BF24C1C1B8D0E5800C722D9 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF24C1A1B8D0E5800C722D9 /* MenuViewController.m */; };
 		FC23A90EA93976C10894E5CD /* libPods-Wattpad-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6465A0F201506C11C5ED94 /* libPods-Wattpad-app.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,10 @@
 		7BD6A0021B8CED970048B687 /* story.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = story.json; sourceTree = "<group>"; };
 		7BD6A0071B8CEEDA0048B687 /* StoryCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryCategories.h; sourceTree = "<group>"; };
 		7BD6A0081B8CEEDA0048B687 /* StoryCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryCategories.m; sourceTree = "<group>"; };
+		7BF24C171B8D0E5800C722D9 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		7BF24C181B8D0E5800C722D9 /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
+		7BF24C191B8D0E5800C722D9 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		7BF24C1A1B8D0E5800C722D9 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		7E6465A0F201506C11C5ED94 /* libPods-Wattpad-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wattpad-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CD79BA77A4E8257B657639 /* Pods-Wattpad-appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad-appTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wattpad-appTests/Pods-Wattpad-appTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0322953625E8DAF4E7F3FCE /* Pods-Wattpad-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wattpad-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wattpad-app/Pods-Wattpad-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +240,8 @@
 		39E3D7411B879A5F005043D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7BF24C1E1B8D0E6500C722D9 /* Menu */,
+				7BF24C1D1B8D0E5C00C722D9 /* Container */,
 				398574591B8B61010036C3B7 /* List Controller */,
 				3985745A1B8B610B0036C3B7 /* Grid Controller */,
 			);
@@ -273,6 +281,24 @@
 				7BD69FFE1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m */,
 			);
 			name = DataSourceDelegate;
+			sourceTree = "<group>";
+		};
+		7BF24C1D1B8D0E5C00C722D9 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				7BF24C171B8D0E5800C722D9 /* ContainerViewController.h */,
+				7BF24C181B8D0E5800C722D9 /* ContainerViewController.m */,
+			);
+			name = Container;
+			sourceTree = "<group>";
+		};
+		7BF24C1E1B8D0E6500C722D9 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				7BF24C191B8D0E5800C722D9 /* MenuViewController.h */,
+				7BF24C1A1B8D0E5800C722D9 /* MenuViewController.m */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 		808FE0716CFEBDD92182E9F5 /* Pods */ = {
@@ -459,7 +485,9 @@
 			files = (
 				7BB57A531B8B5A3800A2C357 /* Story.m in Sources */,
 				7BD6A0091B8CEEDA0048B687 /* StoryCategories.m in Sources */,
+				7BF24C1B1B8D0E5800C722D9 /* ContainerViewController.m in Sources */,
 				7BB57A501B8B54A300A2C357 /* StoryCategory.m in Sources */,
+				7BF24C1C1B8D0E5800C722D9 /* MenuViewController.m in Sources */,
 				7BD69FFF1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m in Sources */,
 				398574581B8B60FD0036C3B7 /* GridCollectionViewController.m in Sources */,
 				39E3D7201B879641005043D8 /* AppDelegate.m in Sources */,

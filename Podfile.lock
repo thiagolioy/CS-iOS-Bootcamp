@@ -21,6 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Expecta (1.0.2)
+  - HMSegmentedControl (1.5.2)
   - Mantle (2.0.4):
     - Mantle/extobjc (= 2.0.4)
   - Mantle/extobjc (2.0.4)
@@ -34,6 +35,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - Expecta (~> 1.0.0)
+  - HMSegmentedControl
   - Mantle
   - OCMock
   - SDWebImage (~> 3.7)
@@ -43,6 +45,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
+  HMSegmentedControl: 83b9686022d2176fb6457d2bdb61e5d6393fed7d
   Mantle: 6bee68168423948be0c0c5924832bf3af188e099
   OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84

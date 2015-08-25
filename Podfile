@@ -6,6 +6,7 @@ target 'Wattpad-app' do
 pod "AFNetworking", "~> 2.0"
 pod "Mantle"
 pod 'SDWebImage', '~>3.7'
+pod 'HMSegmentedControl'
 
 end
 
