@@ -32,7 +32,7 @@
 }
 
 + (NSValueTransformer *)storyCategoriesJSONTransformer {
-    return [MTLJSONAdapter dictionaryTransformerWithModelClass:[Categories class]];
+    return [MTLJSONAdapter dictionaryTransformerWithModelClass:[StoryCategory class]];
 }
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Jean Vinge. All rights reserved.
 //
 
-#import "Categories.h"
+#import "StoryCategory.h"
 
-@implementation Categories
+@implementation StoryCategory
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{

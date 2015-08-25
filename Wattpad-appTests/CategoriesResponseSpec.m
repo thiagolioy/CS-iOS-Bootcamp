@@ -12,7 +12,7 @@
 
 #import <TLJsonFactory.h>
 
-#import "Stories.h"
+#import "StoryCategories.h"
 
 
 SpecBegin(CategoriesResponseSpec)
@@ -20,15 +20,16 @@ SpecBegin(CategoriesResponseSpec)
 
 describe(@"CategoriesResponse", ^{
 
-    __block Stories *stories;
+    __block StoryCategories *categories;
     
     beforeAll(^{
-//        NSDictionary *dc = [TLJsonFactory tl_jsonDictFromFile:@"categories"];
-//        stories = [Stories parse:dc];
+        NSError *error;
+        NSDictionary *dc = [TLJsonFactory tl_jsonDictFromFile:@"categories"];
+        categories = [MTLJSONAdapter modelOfClass:[StoryCategories class] fromJSONDictionary:dc error:&error];
     });
     
     it(@"should not be nil", ^{
-//        expect(stories).toNot.beNil();
+        expect(categories).toNot.beNil();
     });
     
     it(@"should have an array of kind", ^{

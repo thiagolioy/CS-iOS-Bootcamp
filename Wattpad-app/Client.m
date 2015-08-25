@@ -7,7 +7,8 @@
 //
 
 #import "Client.h"
-#import "Categories.h"
+#import "StoryCategory.h"
+#import "StoryCategories.h"
 
 @implementation Client
 
@@ -46,12 +47,12 @@ static NSString *const kAPISecret = @"rIezAPvXCOOVBfoVtiDv85DMHXxwqHxrO1uIP7cQxz
     
     [self GET:kPathCategories parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        NSError *error;
         
-        NSMutableArray *categoriesArray = [NSMutableArray arrayWithArray:[MTLJSONAdapter modelsOfClass:[Categories class] fromJSONArray:[responseObject objectForKey:@"categories"] error:&error]];
+        NSError *error;
+        StoryCategories *categories = [MTLJSONAdapter modelOfClass:[StoryCategories class] fromJSONDictionary:responseObject error:&error];
         
         if (success) {
-            success(categoriesArray);
+            success(categories.categories);
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

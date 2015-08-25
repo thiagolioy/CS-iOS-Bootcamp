@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Mantle.h"
 
-@interface Categories : MTLModel <MTLJSONSerializing>
+@interface StoryCategory : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, assign) NSInteger categoryId;
 @property (nonatomic, strong) NSString *categoryName;
