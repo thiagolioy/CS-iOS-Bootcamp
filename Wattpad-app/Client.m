@@ -37,6 +37,7 @@ static NSString *const kAPISecret = @"rIezAPvXCOOVBfoVtiDv85DMHXxwqHxrO1uIP7cQxz
         
     });
     
+    
     return _sharedInstance;
 }
 

@@ -1,3 +1,4 @@
+
 //
 //  MenuViewController.h
 //  Wattpad-app
@@ -7,6 +8,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HMSegmentedControl.h"
 
 @interface MenuViewController : UIViewController
 

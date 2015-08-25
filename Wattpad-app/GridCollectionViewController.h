@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GridCollectionViewController : UICollectionViewController
+@interface GridCollectionViewController : UIViewController
 
 @end
