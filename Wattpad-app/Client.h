@@ -12,4 +12,7 @@
 
 + (instancetype)sharedInstance;
 
+-(void)getWattPadCategoriesWithSuccess:(void (^)(NSArray *categories))success
+                            andFailure:(void (^)(NSError *error))failure;
+
 @end

@@ -1,0 +1,92 @@
+{
+    "categories": [
+                   {
+                   "id": 4,
+                   "name": "Romance"
+                   },
+                   {
+                   "id": 5,
+                   "name": "Science Fiction"
+                   },
+                   {
+                   "id": 3,
+                   "name": "Fantasy"
+                   },
+                   {
+                   "id": 7,
+                   "name": "Humor"
+                   },
+                   {
+                   "id": 12,
+                   "name": "Paranormal"
+                   },
+                   {
+                   "id": 8,
+                   "name": "Mystery / Thriller"
+                   },
+                   {
+                   "id": 9,
+                   "name": "Horror"
+                   },
+                   {
+                   "id": 11,
+                   "name": "Adventure"
+                   },
+                   {
+                   "id": 23,
+                   "name": "Historical Fiction"
+                   },
+                   {
+                   "id": 1,
+                   "name": "Teen Fiction"
+                   },
+                   {
+                   "id": 6,
+                   "name": "Fanfiction"
+                   },
+                   {
+                   "id": 2,
+                   "name": "Poetry"
+                   },
+                   {
+                   "id": 17,
+                   "name": "Short Story"
+                   },
+                   {
+                   "id": 21,
+                   "name": "General Fiction"
+                   },
+                   {
+                   "id": 24,
+                   "name": "ChickLit"
+                   },
+                   {
+                   "id": 14,
+                   "name": "Action"
+                   },
+                   {
+                   "id": 18,
+                   "name": "Vampire"
+                   },
+                   {
+                   "id": 22,
+                   "name": "Werewolf"
+                   },
+                   {
+                   "id": 13,
+                   "name": "Spiritual"
+                   },
+                   {
+                   "id": 16,
+                   "name": "Non-Fiction"
+                   },
+                   {
+                   "id": 10,
+                   "name": "Classics"
+                   },
+                   {
+                   "id": 19,
+                   "name": "Random"
+                   }
+                   ]
+}

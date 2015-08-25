@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - coverage.info - Wattpad-app/TableViewDatasourceAndDelegate.m</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">Wattpad-app</a> - TableViewDatasourceAndDelegate.m<span style="font-size: 80%;"> (source / <a href="TableViewDatasourceAndDelegate.m.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntryHi">94.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2015-08-25 15:11:45</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntryLo">71.4 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : //</a>
+<span class="lineNum">       2 </span>            : //  TableViewDatasourceAndDelegate.m
+<span class="lineNum">       3 </span>            : //  Wattpad-app
+<span class="lineNum">       4 </span>            : //
+<span class="lineNum">       5 </span>            : //  Created by Mateus Campos on 25/08/15.
+<span class="lineNum">       6 </span>            : //  Copyright (c) 2015 Jean Vinge. All rights reserved.
+<span class="lineNum">       7 </span>            : //
+<span class="lineNum">       8 </span>            : 
+<span class="lineNum">       9 </span>            : #import &quot;TableViewDatasourceAndDelegate.h&quot;
+<a name="10"><span class="lineNum">      10 </span>            : </a>
+<span class="lineNum">      11 </span>            : @interface TableViewDatasourceAndDelegate ()
+<span class="lineNum">      12 </span><span class="lineCov">          1 : @property(nonatomic,weak) UITableView *tableView;</span>
+<a name="13"><span class="lineNum">      13 </span>            : @end</a>
+<span class="lineNum">      14 </span>            : 
+<a name="15"><span class="lineNum">      15 </span><span class="lineNoCov">          0 : @implementation TableViewDatasourceAndDelegate</span></a>
+<span class="lineNum">      16 </span>            : 
+<span class="lineNum">      17 </span>            : - (instancetype)initWithTableView:(UITableView *)tableView {
+<span class="lineNum">      18 </span>            :     
+<span class="lineNum">      19 </span><span class="lineCov">          1 :     self = [super init];</span>
+<span class="lineNum">      20 </span><span class="lineCov">          1 :     if (self) {</span>
+<span class="lineNum">      21 </span><span class="lineCov">          1 :         self.tableView = tableView;</span>
+<span class="lineNum">      22 </span><span class="lineCov">          1 :     }</span>
+<span class="lineNum">      23 </span><span class="lineCov">          1 :     return self;</span>
+<span class="lineNum">      24 </span><span class="lineCov">          1 : }</span>
+<a name="25"><span class="lineNum">      25 </span>            : </a>
+<span class="lineNum">      26 </span>            : 
+<span class="lineNum">      27 </span>            : - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+<span class="lineNum">      28 </span>            :     // Return the number of sections.
+<span class="lineNum">      29 </span><span class="lineCov">          3 :     return 1;</span>
+<a name="30"><span class="lineNum">      30 </span><span class="lineCov">          3 : }</span></a>
+<span class="lineNum">      31 </span>            : 
+<span class="lineNum">      32 </span>            : - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+<span class="lineNum">      33 </span>            :     // Return the number of rows in the section.
+<span class="lineNum">      34 </span><span class="lineCov">          3 :     return 5;</span>
+<span class="lineNum">      35 </span><span class="lineCov">          3 : }</span>
+<a name="36"><span class="lineNum">      36 </span>            : </a>
+<span class="lineNum">      37 </span>            : 
+<span class="lineNum">      38 </span>            : - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+<span class="lineNum">      39 </span><span class="lineCov">          5 :     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@&quot;cell&quot; forIndexPath:indexPath];</span>
+<span class="lineNum">      40 </span>            :     
+<span class="lineNum">      41 </span><span class="lineCov">          5 :     cell.backgroundColor = [UIColor blackColor];</span>
+<span class="lineNum">      42 </span>            :     // Configure the cell...
+<span class="lineNum">      43 </span>            :     
+<span class="lineNum">      44 </span><span class="lineCov">          5 :     cell.textLabel.text = @&quot;&quot;;</span>
+<span class="lineNum">      45 </span>            :     
+<span class="lineNum">      46 </span><span class="lineCov">          5 :     return cell;</span>
+<span class="lineNum">      47 </span><span class="lineCov">          5 : }</span>
+<span class="lineNum">      48 </span>            : 
+<span class="lineNum">      49 </span>            : 
+<span class="lineNum">      50 </span>            : @end
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.11</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>
