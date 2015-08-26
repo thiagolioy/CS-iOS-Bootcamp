@@ -39,9 +39,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor blackColor];
-    // Configure the cell...
-    
-    cell.textLabel.text = @"";
     
     return cell;
 }

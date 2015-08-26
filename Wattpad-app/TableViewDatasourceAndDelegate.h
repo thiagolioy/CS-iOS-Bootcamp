@@ -10,5 +10,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TableViewDatasourceAndDelegate : NSObject<UITableViewDelegate,UITableViewDataSource>
-- (instancetype)initWithTableView:(UITableView *)tableView ;
+- (instancetype)initWithTableView:(UITableView *)tableView;
 @end

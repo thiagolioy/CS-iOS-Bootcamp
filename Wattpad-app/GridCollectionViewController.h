@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GridCollectionViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
