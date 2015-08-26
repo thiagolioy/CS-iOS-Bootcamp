@@ -4,22 +4,22 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>LCOV - coverage.info - Wattpad-app/ListTableViewController.h</title>
-  <link rel="stylesheet" type="text/css" href="../gcov.css">
+  <title>LCOV - coverage.info - Wattpad-app/Model/StoryCategory.m</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
 </head>
 
 <body>
 
   <table width="100%" border=0 cellspacing=0 cellpadding=0>
     <tr><td class="title">LCOV - code coverage report</td></tr>
-    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
 
     <tr>
       <td width="100%">
         <table cellpadding=1 border=0 width="100%">
           <tr>
             <td width="10%" class="headerItem">Current view:</td>
-            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">Wattpad-app</a> - ListTableViewController.h<span style="font-size: 80%;"> (source / <a href="ListTableViewController.h.func-sort-c.html">functions</a>)</span></td>
+            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">Wattpad-app/Model</a> - StoryCategory.m<span style="font-size: 80%;"> (source / <a href="StoryCategory.m.func-sort-c.html">functions</a>)</span></td>
             <td width="5%"></td>
             <td width="15%"></td>
             <td width="10%" class="headerCovTableHead">Hit</td>
@@ -32,8 +32,8 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">1</td>
-            <td class="headerCovTableEntry">1</td>
-            <td class="headerCovTableEntryHi">100.0 %</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntryLo">50.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
@@ -44,12 +44,12 @@
             <td class="headerCovTableEntry">2</td>
             <td class="headerCovTableEntryLo">50.0 %</td>
           </tr>
-          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+          <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
       </td>
     </tr>
 
-    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
   </table>
 
   <table cellpadding=0 cellspacing=0 border=0>
@@ -61,18 +61,25 @@
 <pre class="sourceHeading">          Line data    Source code</pre>
 <pre class="source">
 <a name="1"><span class="lineNum">       1 </span>            : //</a>
-<span class="lineNum">       2 </span>            : //  ListTableViewController.h
+<span class="lineNum">       2 </span>            : //  Categories.m
 <span class="lineNum">       3 </span>            : //  Wattpad-app
 <span class="lineNum">       4 </span>            : //
-<span class="lineNum">       5 </span>            : //  Created by Jean Vinge on 24/08/15.
+<span class="lineNum">       5 </span>            : //  Created by Mateus Campos on 24/08/15.
 <span class="lineNum">       6 </span>            : //  Copyright (c) 2015 Jean Vinge. All rights reserved.
 <span class="lineNum">       7 </span>            : //
 <span class="lineNum">       8 </span>            : 
-<span class="lineNum">       9 </span>            : #import &lt;UIKit/UIKit.h&gt;
-<a name="10"><span class="lineNum">      10 </span>            : </a>
-<span class="lineNum">      11 </span>            : @interface ListTableViewController : UIViewController
-<span class="lineNum">      12 </span><span class="lineCov">          4 : @property (weak, nonatomic) IBOutlet UITableView *tableView;</span>
-<span class="lineNum">      13 </span>            : @end
+<a name="9"><span class="lineNum">       9 </span>            : #import &quot;StoryCategory.h&quot;</a>
+<span class="lineNum">      10 </span>            : 
+<a name="11"><span class="lineNum">      11 </span><span class="lineNoCov">          0 : @implementation StoryCategory</span></a>
+<span class="lineNum">      12 </span>            : 
+<span class="lineNum">      13 </span>            : + (NSDictionary *)JSONKeyPathsByPropertyKey {
+<span class="lineNum">      14 </span><span class="lineCov">          1 :     return @{</span>
+<span class="lineNum">      15 </span>            :              @&quot;categoryId&quot;: @&quot;id&quot;,
+<span class="lineNum">      16 </span>            :              @&quot;categoryName&quot;: @&quot;name&quot;
+<span class="lineNum">      17 </span>            :              };
+<span class="lineNum">      18 </span>            : }
+<span class="lineNum">      19 </span>            : 
+<span class="lineNum">      20 </span>            : @end
 </pre>
       </td>
     </tr>
@@ -80,7 +87,7 @@
   <br>
 
   <table width="100%" border=0 cellspacing=0 cellpadding=0>
-    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
     <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.11</a></td></tr>
   </table>
   <br>
