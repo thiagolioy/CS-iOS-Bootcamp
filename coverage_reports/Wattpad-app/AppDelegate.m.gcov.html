@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">3</td>
             <td class="headerCovTableEntry">8</td>
-            <td class="headerCovTableEntryLo">37.5 %</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntryLo">47.1 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-08-26 13:24:27</td>
+            <td class="headerValue">2015-08-27 16:02:07</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">7</td>
-            <td class="headerCovTableEntryLo">28.6 %</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntryLo">25.0 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -70,41 +70,59 @@
 <span class="lineNum">       8 </span>            : 
 <span class="lineNum">       9 </span>            : #import &quot;AppDelegate.h&quot;
 <span class="lineNum">      10 </span>            : 
-<span class="lineNum">      11 </span>            : @interface AppDelegate ()
+<span class="lineNum">      11 </span>            : #import &lt;Parse/Parse.h&gt;
 <span class="lineNum">      12 </span>            : 
-<a name="13"><span class="lineNum">      13 </span>            : @end</a>
-<span class="lineNum">      14 </span>            : 
-<span class="lineNum">      15 </span><span class="lineNoCov">          0 : @implementation AppDelegate</span>
-<a name="16"><span class="lineNum">      16 </span>            : </a>
+<span class="lineNum">      13 </span>            : 
+<span class="lineNum">      14 </span>            : @interface AppDelegate ()
+<span class="lineNum">      15 </span>            : 
+<a name="16"><span class="lineNum">      16 </span>            : @end</a>
 <span class="lineNum">      17 </span>            : 
-<span class="lineNum">      18 </span>            : - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-<span class="lineNum">      19 </span>            :     // Override point for customization after application launch.
-<span class="lineNum">      20 </span><span class="lineCov">          1 :     return YES;</span>
-<a name="21"><span class="lineNum">      21 </span><span class="lineCov">          1 : }</span></a>
-<span class="lineNum">      22 </span>            : 
-<span class="lineNum">      23 </span>            : - (void)applicationWillResignActive:(UIApplication *)application {
-<span class="lineNum">      24 </span>            :     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-<span class="lineNum">      25 </span>            :     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-<a name="26"><span class="lineNum">      26 </span><span class="lineNoCov">          0 : }</span></a>
-<span class="lineNum">      27 </span>            : 
-<span class="lineNum">      28 </span>            : - (void)applicationDidEnterBackground:(UIApplication *)application {
-<span class="lineNum">      29 </span>            :     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-<span class="lineNum">      30 </span>            :     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-<a name="31"><span class="lineNum">      31 </span><span class="lineNoCov">          0 : }</span></a>
-<span class="lineNum">      32 </span>            : 
-<span class="lineNum">      33 </span>            : - (void)applicationWillEnterForeground:(UIApplication *)application {
-<span class="lineNum">      34 </span>            :     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-<a name="35"><span class="lineNum">      35 </span><span class="lineNoCov">          0 : }</span></a>
-<span class="lineNum">      36 </span>            : 
-<span class="lineNum">      37 </span>            : - (void)applicationDidBecomeActive:(UIApplication *)application {
-<span class="lineNum">      38 </span>            :     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-<a name="39"><span class="lineNum">      39 </span><span class="lineCov">          1 : }</span></a>
-<span class="lineNum">      40 </span>            : 
-<span class="lineNum">      41 </span>            : - (void)applicationWillTerminate:(UIApplication *)application {
-<span class="lineNum">      42 </span>            :     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-<span class="lineNum">      43 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">      44 </span>            : 
-<span class="lineNum">      45 </span>            : @end
+<span class="lineNum">      18 </span><span class="lineNoCov">          0 : @implementation AppDelegate</span>
+<a name="19"><span class="lineNum">      19 </span>            : </a>
+<span class="lineNum">      20 </span>            : 
+<span class="lineNum">      21 </span>            : - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+<span class="lineNum">      22 </span>            :     // Override point for customization after application launch.
+<span class="lineNum">      23 </span>            :     
+<span class="lineNum">      24 </span><span class="lineCov">          1 :     [Parse setApplicationId:@&quot;WhNJvmCivsXxvVR3LdBFygZgu9a5pfPEpPGoxatW&quot; clientKey:@&quot;FXPaTa2oz4ZSA4AhSxq4QUFcfx968RXjjbwWGeZ7&quot;];</span>
+<span class="lineNum">      25 </span>            :     
+<span class="lineNum">      26 </span><span class="lineCov">          1 :     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound);</span>
+<span class="lineNum">      27 </span><span class="lineCov">          1 :     UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes  categories:nil];</span>
+<span class="lineNum">      28 </span><span class="lineCov">          1 :     [application registerUserNotificationSettings:settings];</span>
+<span class="lineNum">      29 </span><span class="lineCov">          1 :     [application registerForRemoteNotifications];</span>
+<span class="lineNum">      30 </span>            :     
+<span class="lineNum">      31 </span><span class="lineCov">          1 :     return YES;</span>
+<a name="32"><span class="lineNum">      32 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">      33 </span>            : 
+<span class="lineNum">      34 </span>            : - (void)applicationWillResignActive:(UIApplication *)application {
+<span class="lineNum">      35 </span>            :     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+<span class="lineNum">      36 </span>            :     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+<a name="37"><span class="lineNum">      37 </span><span class="lineNoCov">          0 : }</span></a>
+<span class="lineNum">      38 </span>            : 
+<span class="lineNum">      39 </span>            : - (void)applicationDidEnterBackground:(UIApplication *)application {
+<span class="lineNum">      40 </span>            :     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+<span class="lineNum">      41 </span>            :     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+<a name="42"><span class="lineNum">      42 </span><span class="lineNoCov">          0 : }</span></a>
+<span class="lineNum">      43 </span>            : 
+<span class="lineNum">      44 </span>            : - (void)applicationWillEnterForeground:(UIApplication *)application {
+<span class="lineNum">      45 </span>            :     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+<a name="46"><span class="lineNum">      46 </span><span class="lineNoCov">          0 : }</span></a>
+<span class="lineNum">      47 </span>            : 
+<span class="lineNum">      48 </span>            : - (void)applicationDidBecomeActive:(UIApplication *)application {
+<span class="lineNum">      49 </span>            :     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+<a name="50"><span class="lineNum">      50 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">      51 </span>            : 
+<span class="lineNum">      52 </span>            : - (void)applicationWillTerminate:(UIApplication *)application {
+<span class="lineNum">      53 </span>            :     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+<a name="54"><span class="lineNum">      54 </span><span class="lineNoCov">          0 : }</span></a>
+<span class="lineNum">      55 </span>            : 
+<span class="lineNum">      56 </span>            : - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+<span class="lineNum">      57 </span>            :     // Store the deviceToken in the current Installation and save it to Parse
+<span class="lineNum">      58 </span><span class="lineNoCov">          0 :     PFInstallation *currentInstallation = [PFInstallation currentInstallation];</span>
+<span class="lineNum">      59 </span><span class="lineNoCov">          0 :     [currentInstallation setDeviceTokenFromData:deviceToken];</span>
+<span class="lineNum">      60 </span><span class="lineNoCov">          0 :     [currentInstallation saveInBackground];</span>
+<span class="lineNum">      61 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      62 </span>            : 
+<span class="lineNum">      63 </span>            : @end
 </pre>
       </td>
     </tr>

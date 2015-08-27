@@ -23,10 +23,12 @@
 		7BB57A501B8B54A300A2C357 /* StoryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB57A4F1B8B54A300A2C357 /* StoryCategory.m */; };
 		7BB57A531B8B5A3800A2C357 /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB57A521B8B5A3800A2C357 /* Story.m */; };
 		7BB57A561B8B754C00A2C357 /* Stories.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB57A551B8B754C00A2C357 /* Stories.m */; };
+		7BD461471B8F810E0060A384 /* BaseMantleObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD461461B8F810E0060A384 /* BaseMantleObj.m */; };
 		7BD69FFF1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD69FFE1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m */; };
 		7BD6A0011B8CED250048B687 /* stories.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD6A0001B8CED250048B687 /* stories.json */; };
 		7BD6A0031B8CED970048B687 /* story.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD6A0021B8CED970048B687 /* story.json */; };
 		7BD6A0091B8CEEDA0048B687 /* StoryCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6A0081B8CEEDA0048B687 /* StoryCategories.m */; };
+		7BE0AD301B8E5E7F00A4A8F9 /* StoriesResponseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE0AD2F1B8E5E7F00A4A8F9 /* StoriesResponseSpec.m */; };
 		7BF24C1B1B8D0E5800C722D9 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF24C181B8D0E5800C722D9 /* ContainerViewController.m */; };
 		7BF24C1C1B8D0E5800C722D9 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF24C1A1B8D0E5800C722D9 /* MenuViewController.m */; };
 		7BF24C241B8E0B9600C722D9 /* CollectionViewDatasourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF24C231B8E0B9600C722D9 /* CollectionViewDatasourceAndDelegate.m */; };
@@ -74,12 +76,15 @@
 		7BB57A521B8B5A3800A2C357 /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 		7BB57A541B8B754C00A2C357 /* Stories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stories.h; sourceTree = "<group>"; };
 		7BB57A551B8B754C00A2C357 /* Stories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stories.m; sourceTree = "<group>"; };
+		7BD461451B8F810E0060A384 /* BaseMantleObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMantleObj.h; sourceTree = "<group>"; };
+		7BD461461B8F810E0060A384 /* BaseMantleObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMantleObj.m; sourceTree = "<group>"; };
 		7BD69FFD1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDatasourceAndDelegate.h; sourceTree = "<group>"; };
 		7BD69FFE1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDatasourceAndDelegate.m; sourceTree = "<group>"; };
 		7BD6A0001B8CED250048B687 /* stories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stories.json; sourceTree = "<group>"; };
 		7BD6A0021B8CED970048B687 /* story.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = story.json; sourceTree = "<group>"; };
 		7BD6A0071B8CEEDA0048B687 /* StoryCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryCategories.h; sourceTree = "<group>"; };
 		7BD6A0081B8CEEDA0048B687 /* StoryCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryCategories.m; sourceTree = "<group>"; };
+		7BE0AD2F1B8E5E7F00A4A8F9 /* StoriesResponseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoriesResponseSpec.m; sourceTree = "<group>"; };
 		7BF24C171B8D0E5800C722D9 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
 		7BF24C181B8D0E5800C722D9 /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 		7BF24C191B8D0E5800C722D9 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
@@ -131,6 +136,7 @@
 				20A7D9951B8CE3D20040412A /* CategoriesResponseSpec.m */,
 				7BF24C251B8E1F1700C722D9 /* CategoryResponseSpec.m */,
 				7BF24C271B8E204000C722D9 /* StoryResponseSpec.m */,
+				7BE0AD2F1B8E5E7F00A4A8F9 /* StoriesResponseSpec.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -266,6 +272,8 @@
 				7BB57A551B8B754C00A2C357 /* Stories.m */,
 				7BD6A0071B8CEEDA0048B687 /* StoryCategories.h */,
 				7BD6A0081B8CEEDA0048B687 /* StoryCategories.m */,
+				7BD461451B8F810E0060A384 /* BaseMantleObj.h */,
+				7BD461461B8F810E0060A384 /* BaseMantleObj.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -498,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BB57A531B8B5A3800A2C357 /* Story.m in Sources */,
+				7BD461471B8F810E0060A384 /* BaseMantleObj.m in Sources */,
 				7BD6A0091B8CEEDA0048B687 /* StoryCategories.m in Sources */,
 				7BF24C241B8E0B9600C722D9 /* CollectionViewDatasourceAndDelegate.m in Sources */,
 				7BF24C1B1B8D0E5800C722D9 /* ContainerViewController.m in Sources */,
@@ -521,6 +530,7 @@
 				7BF24C281B8E204000C722D9 /* StoryResponseSpec.m in Sources */,
 				20A7D9961B8CE3D20040412A /* CategoriesResponseSpec.m in Sources */,
 				7BF24C261B8E1F1700C722D9 /* CategoryResponseSpec.m in Sources */,
+				7BE0AD301B8E5E7F00A4A8F9 /* StoriesResponseSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +581,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -615,7 +626,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -644,6 +656,7 @@
 				INFOPLIST_FILE = "Wattpad-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "89340096-f005-4e3e-9b7c-6cd33cccd3d5";
 			};
 			name = Debug;
 		};
@@ -655,6 +668,7 @@
 				INFOPLIST_FILE = "Wattpad-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "89340096-f005-4e3e-9b7c-6cd33cccd3d5";
 			};
 			name = Release;
 		};

@@ -1,5 +1,5 @@
 //
-//  StoryResponseSpec.m
+//  StoriesResponseSpec.m
 //  Wattpad-app
 //
 //  Created by Mateus Campos on 26/08/15.
@@ -12,24 +12,24 @@
 
 #import <TLJsonFactory.h>
 
-#import "Story.h"
+#import "Stories.h"
 
 
-SpecBegin(StoryResponseSpec)
+SpecBegin(StoriesResponseSpec)
 
 
 describe(@"CategoriesResponse", ^{
     
-    __block Story *story;
+    __block Stories *stories;
     
     beforeAll(^{
-        NSDictionary *dc = [TLJsonFactory tl_jsonDictFromFile:@"story"];
         NSError *error;
-        story = [Story parse:dc error:error];
+        NSDictionary *dc = [TLJsonFactory tl_jsonDictFromFile:@"stories"];
+        stories = [MTLJSONAdapter modelOfClass:[Stories class] fromJSONDictionary:dc error:&error];
     });
     
     it(@"should not be nil", ^{
-        expect(story).toNot.beNil();
+        expect(stories).toNot.beNil();
     });
     
     it(@"should have an array of kind", ^{

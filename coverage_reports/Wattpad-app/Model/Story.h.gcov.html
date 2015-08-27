@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">12</td>
-            <td class="headerCovTableEntryLo">0.0 %</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-08-26 13:24:27</td>
+            <td class="headerValue">2015-08-27 16:02:07</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">0</td>
             <td class="headerCovTableEntry">24</td>
-            <td class="headerCovTableEntryLo">0.0 %</td>
+            <td class="headerCovTableEntry">24</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -69,23 +69,23 @@
 <span class="lineNum">       7 </span>            : //
 <span class="lineNum">       8 </span>            : 
 <span class="lineNum">       9 </span>            : #import &lt;Foundation/Foundation.h&gt;
-<span class="lineNum">      10 </span>            : #import &quot;StoryCategory.h&quot;
-<span class="lineNum">      11 </span>            : #import &quot;Mantle.h&quot;
-<span class="lineNum">      12 </span>            : 
-<a name="13"><span class="lineNum">      13 </span>            : @interface Story : MTLModel &lt;MTLJSONSerializing&gt;</a>
-<a name="14"><span class="lineNum">      14 </span>            : </a>
-<a name="15"><span class="lineNum">      15 </span><span class="lineNoCov">          0 : @property (nonatomic, assign) NSInteger storyId;</span></a>
-<a name="16"><span class="lineNum">      16 </span><span class="lineNoCov">          0 : @property (nonatomic, strong) NSString *storyTitle;</span></a>
-<a name="17"><span class="lineNum">      17 </span><span class="lineNoCov">          0 : @property (nonatomic, strong) NSURL *storyCoverURL;</span></a>
-<a name="18"><span class="lineNum">      18 </span><span class="lineNoCov">          0 : @property (nonatomic, strong) NSString *storyDescription;</span></a>
-<a name="19"><span class="lineNum">      19 </span><span class="lineNoCov">          0 : @property (nonatomic, strong) NSString *storyUser;</span></a>
-<a name="20"><span class="lineNum">      20 </span><span class="lineNoCov">          0 : @property (nonatomic, assign) NSInteger storyNumPart;</span></a>
-<a name="21"><span class="lineNum">      21 </span><span class="lineNoCov">          0 : @property (nonatomic, strong) NSString *storyTags;</span></a>
-<a name="22"><span class="lineNum">      22 </span><span class="lineNoCov">          0 : @property (nonatomic, assign) NSInteger storyVoteCount;</span></a>
-<a name="23"><span class="lineNum">      23 </span><span class="lineNoCov">          0 : @property (nonatomic, assign) NSInteger storyReadCount;</span></a>
-<a name="24"><span class="lineNum">      24 </span><span class="lineNoCov">          0 : @property (nonatomic, assign) NSInteger storyCommentCount;</span></a>
-<span class="lineNum">      25 </span><span class="lineNoCov">          0 : @property (nonatomic, strong) NSDate *storyCreateDate;</span>
-<span class="lineNum">      26 </span><span class="lineNoCov">          0 : @property (nonatomic, strong) StoryCategory *storyCategories;</span>
+<span class="lineNum">      10 </span>            : #import &quot;BaseMantleObj.h&quot;
+<span class="lineNum">      11 </span>            : 
+<a name="12"><span class="lineNum">      12 </span>            : @interface Story : BaseMantleObj</a>
+<a name="13"><span class="lineNum">      13 </span>            : </a>
+<a name="14"><span class="lineNum">      14 </span><span class="lineCov">         22 : @property (nonatomic, assign) NSInteger storyId;</span></a>
+<a name="15"><span class="lineNum">      15 </span><span class="lineCov">         22 : @property (nonatomic, strong) NSString *storyTitle;</span></a>
+<a name="16"><span class="lineNum">      16 </span><span class="lineCov">         22 : @property (nonatomic, strong) NSURL *storyCoverURL;</span></a>
+<a name="17"><span class="lineNum">      17 </span><span class="lineCov">         22 : @property (nonatomic, strong) NSString *storyDescription;</span></a>
+<a name="18"><span class="lineNum">      18 </span><span class="lineCov">         22 : @property (nonatomic, strong) NSString *storyUser;</span></a>
+<a name="19"><span class="lineNum">      19 </span><span class="lineCov">         22 : @property (nonatomic, assign) NSInteger storyNumPart;</span></a>
+<a name="20"><span class="lineNum">      20 </span><span class="lineCov">         22 : @property (nonatomic, strong) NSString *storyTags;</span></a>
+<a name="21"><span class="lineNum">      21 </span><span class="lineCov">         22 : @property (nonatomic, assign) NSInteger storyVoteCount;</span></a>
+<a name="22"><span class="lineNum">      22 </span><span class="lineCov">         22 : @property (nonatomic, assign) NSInteger storyReadCount;</span></a>
+<a name="23"><span class="lineNum">      23 </span><span class="lineCov">         22 : @property (nonatomic, assign) NSInteger storyCommentCount;</span></a>
+<span class="lineNum">      24 </span><span class="lineCov">         22 : @property (nonatomic, strong) NSDate *storyCreateDate;</span>
+<span class="lineNum">      25 </span><span class="lineCov">         22 : @property (nonatomic, strong) NSArray *storyCategories;</span>
+<span class="lineNum">      26 </span>            : 
 <span class="lineNum">      27 </span>            : 
 <span class="lineNum">      28 </span>            : @end
 </pre>

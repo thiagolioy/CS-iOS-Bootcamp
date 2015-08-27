@@ -6,13 +6,13 @@ module Fastlane
 
     class DeployMobrAction
       @@releases_folder = "releases"
-      @@api_key = ""
-      @@api_user = ""
-      @@app_id = ""
+      @@api_key = "9b32dc64c9f21c01e17ae010a603ff2a8bedaaf3"
+      @@api_user = "bootcampios"
+      @@app_id = "88"
       @@platform_id = "1"
       @@base_url = "http://mobrelease.concretecorp.com.br"
       @@release_url = "#{@@base_url}/api/v1/release/?format=json&username=#{@@api_user}&api_key=#{@@api_key}"
-      @@slug = ""
+      @@slug = "bootcampios"
 
       def self.run(params)
         require 'rest_client'

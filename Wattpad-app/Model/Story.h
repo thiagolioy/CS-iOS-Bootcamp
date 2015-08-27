@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "StoryCategory.h"
-#import "Mantle.h"
+#import "BaseMantleObj.h"
 
-@interface Story : MTLModel <MTLJSONSerializing>
+@interface Story : BaseMantleObj
 
 @property (nonatomic, assign) NSInteger storyId;
 @property (nonatomic, strong) NSString *storyTitle;
@@ -23,6 +22,7 @@
 @property (nonatomic, assign) NSInteger storyReadCount;
 @property (nonatomic, assign) NSInteger storyCommentCount;
 @property (nonatomic, strong) NSDate *storyCreateDate;
-@property (nonatomic, strong) StoryCategory *storyCategories;
+@property (nonatomic, strong) NSArray *storyCategories;
+
 
 @end

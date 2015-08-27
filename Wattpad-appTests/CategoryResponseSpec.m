@@ -20,16 +20,16 @@ SpecBegin(CategoryResponseSpec)
 
 describe(@"CategoriesResponse", ^{
     
-    __block StoryCategory *categories;
+    __block StoryCategory *category;
     
     beforeAll(^{
         NSError *error;
         NSDictionary *dc = [TLJsonFactory tl_jsonDictFromFile:@"category"];
-        categories = [MTLJSONAdapter modelOfClass:[StoryCategory class] fromJSONDictionary:dc error:&error];
+        category = [MTLJSONAdapter modelOfClass:[StoryCategory class] fromJSONDictionary:dc error:&error];
     });
     
     it(@"should not be nil", ^{
-        expect(categories).toNot.beNil();
+        expect(category).toNot.beNil();
     });
     
     it(@"should have an array of kind", ^{

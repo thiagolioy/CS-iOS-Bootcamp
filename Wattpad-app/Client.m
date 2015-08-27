@@ -9,6 +9,7 @@
 #import "Client.h"
 #import "StoryCategory.h"
 #import "StoryCategories.h"
+#import "Stories.h"
 
 @implementation Client
 
@@ -63,5 +64,35 @@ static NSString *const kAPISecret = @"rIezAPvXCOOVBfoVtiDv85DMHXxwqHxrO1uIP7cQxz
     }];
     
 }
+
+-(void)getWattPadStoriesForCategory:(NSString *)category
+                            andPage:(NSInteger)page
+                        withSuccess:(void (^)(NSArray *stories))success
+                         andFailure:(void (^)(NSError *error))failure {
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary new];
+    [parameters setObject:category forKey:@"category"];
+    [parameters setObject:[NSNumber numberWithInteger:page] forKey:@"offset"];
+    
+    
+    [self GET:kPathStories parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        
+        NSError *error;
+        Stories *stories = [MTLJSONAdapter modelOfClass:[Stories class] fromJSONDictionary:responseObject error:&error];
+        
+        if (success) {
+            success(stories.stories);
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"%@", error.description);
+        
+    }];
+
+}
+
+
 
 @end

@@ -9,6 +9,7 @@
 #import "ListTableViewController.h"
 #import "Client.h"
 #import "TableViewDatasourceAndDelegate.h"
+#import <NSLogPrinter.h>
 
 @interface ListTableViewController ()
 
@@ -30,6 +31,7 @@
     self.tableView.delegate = self.datasource;
     
     [self.tableView reloadData];
+    
 //
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
