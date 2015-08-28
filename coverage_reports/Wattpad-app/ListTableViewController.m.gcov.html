@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">10</td>
-            <td class="headerCovTableEntry">17</td>
-            <td class="headerCovTableEntryLo">58.8 %</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntryMed">75.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-08-28 10:26:17</td>
+            <td class="headerValue">2015-08-28 15:37:47</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">6</td>
             <td class="headerCovTableEntry">8</td>
-            <td class="headerCovTableEntryLo">50.0 %</td>
+            <td class="headerCovTableEntryMed">75.0 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -71,60 +71,51 @@
 <span class="lineNum">       9 </span>            : #import &quot;ListTableViewController.h&quot;
 <span class="lineNum">      10 </span>            : #import &quot;Client.h&quot;
 <span class="lineNum">      11 </span>            : #import &quot;TableViewDatasourceAndDelegate.h&quot;
-<span class="lineNum">      12 </span>            : #import &lt;NSLogPrinter.h&gt;
-<span class="lineNum">      13 </span>            : 
-<a name="14"><span class="lineNum">      14 </span>            : @interface ListTableViewController ()</a>
-<span class="lineNum">      15 </span>            : 
-<span class="lineNum">      16 </span><span class="lineCov">          3 : @property (strong, nonatomic) TableViewDatasourceAndDelegate *datasource;</span>
+<span class="lineNum">      12 </span>            : #import &quot;MenuViewController.h&quot;
+<span class="lineNum">      13 </span>            : #import &lt;NSLogPrinter.h&gt;
+<span class="lineNum">      14 </span>            : 
+<span class="lineNum">      15 </span>            : static NSString *const kNibIdentifier = @&quot;PopularShotsTableViewCell&quot;;
+<span class="lineNum">      16 </span>            : static NSString *const kCellIdentifier = @&quot;cardShotCell&quot;;
 <span class="lineNum">      17 </span>            : 
-<a name="18"><span class="lineNum">      18 </span>            : @end</a>
-<span class="lineNum">      19 </span>            : 
-<span class="lineNum">      20 </span><span class="lineNoCov">          0 : @implementation ListTableViewController</span>
-<span class="lineNum">      21 </span>            : 
-<span class="lineNum">      22 </span>            : 
-<a name="23"><span class="lineNum">      23 </span>            : #pragma mark - Life Cycle</a>
+<span class="lineNum">      18 </span>            : 
+<a name="19"><span class="lineNum">      19 </span>            : @interface ListTableViewController ()</a>
+<a name="20"><span class="lineNum">      20 </span>            : </a>
+<span class="lineNum">      21 </span><span class="lineCov">          3 : @property (strong, nonatomic) TableViewDatasourceAndDelegate *datasource;</span>
+<span class="lineNum">      22 </span><span class="lineCov">          5 : @property (weak, nonatomic) IBOutlet UITableView *tableView;</span>
+<a name="23"><span class="lineNum">      23 </span>            : @end</a>
 <span class="lineNum">      24 </span>            : 
-<span class="lineNum">      25 </span>            : - (void)viewDidLoad {
-<span class="lineNum">      26 </span><span class="lineCov">          1 :     [super viewDidLoad];</span>
-<span class="lineNum">      27 </span>            :     
-<span class="lineNum">      28 </span><span class="lineCov">          1 :     self.datasource = [[TableViewDatasourceAndDelegate alloc] initWithTableView:self.tableView];</span>
-<span class="lineNum">      29 </span>            :     
-<span class="lineNum">      30 </span><span class="lineCov">          1 :     self.tableView.dataSource = self.datasource;</span>
-<span class="lineNum">      31 </span><span class="lineCov">          1 :     self.tableView.delegate = self.datasource;</span>
-<span class="lineNum">      32 </span>            :     
-<span class="lineNum">      33 </span><span class="lineCov">          1 :     [self.tableView reloadData];</span>
-<span class="lineNum">      34 </span>            :     
-<span class="lineNum">      35 </span>            : //
-<span class="lineNum">      36 </span>            :     // Uncomment the following line to preserve selection between presentations.
-<span class="lineNum">      37 </span>            :     // self.clearsSelectionOnViewWillAppear = NO;
-<span class="lineNum">      38 </span>            :     
-<span class="lineNum">      39 </span>            :     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-<span class="lineNum">      40 </span>            :     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-<span class="lineNum">      41 </span>            :     
-<span class="lineNum">      42 </span><span class="lineCov">          1 :     [self getCategories];</span>
-<span class="lineNum">      43 </span>            :     
-<a name="44"><span class="lineNum">      44 </span><span class="lineCov">          1 : }</span></a>
-<span class="lineNum">      45 </span>            : 
-<span class="lineNum">      46 </span>            : - (void)didReceiveMemoryWarning {
-<span class="lineNum">      47 </span><span class="lineNoCov">          0 :     [super didReceiveMemoryWarning];</span>
-<span class="lineNum">      48 </span>            :     // Dispose of any resources that can be recreated.
-<span class="lineNum">      49 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">      50 </span>            : 
-<span class="lineNum">      51 </span>            : 
-<span class="lineNum">      52 </span>            : 
-<a name="53"><span class="lineNum">      53 </span>            : #pragma mark - Actions</a>
-<span class="lineNum">      54 </span>            : 
-<a name="55"><span class="lineNum">      55 </span>            : -(void)getCategories {</a>
-<span class="lineNum">      56 </span>            :     
-<a name="57"><span class="lineNum">      57 </span><span class="lineCov">          1 :     [[Client sharedInstance] getWattPadCategoriesWithSuccess:^(NSArray *categories) {</span></a>
-<span class="lineNum">      58 </span><span class="lineNoCov">          0 :         NSLog(@&quot;%@&quot;, categories.description);</span>
-<span class="lineNum">      59 </span><span class="lineNoCov">          0 :     } andFailure:^(NSError *error) {</span>
-<span class="lineNum">      60 </span><span class="lineNoCov">          0 :         NSLog(@&quot;%@&quot;, error.description);</span>
-<span class="lineNum">      61 </span><span class="lineNoCov">          0 :     }];</span>
-<span class="lineNum">      62 </span>            :     
-<span class="lineNum">      63 </span><span class="lineCov">          1 : }</span>
-<span class="lineNum">      64 </span>            : 
-<span class="lineNum">      65 </span>            : @end
+<span class="lineNum">      25 </span><span class="lineNoCov">          0 : @implementation ListTableViewController</span>
+<span class="lineNum">      26 </span>            : 
+<span class="lineNum">      27 </span>            : 
+<a name="28"><span class="lineNum">      28 </span>            : #pragma mark - Life Cycle</a>
+<span class="lineNum">      29 </span>            : 
+<span class="lineNum">      30 </span>            : - (void)setupTableViewWithIndex:(NSString *)index {
+<span class="lineNum">      31 </span><span class="lineCov">          1 :     UINib *nib = [UINib nibWithNibName:kNibIdentifier bundle:nil];</span>
+<span class="lineNum">      32 </span><span class="lineCov">          1 :     [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];</span>
+<span class="lineNum">      33 </span>            :     
+<span class="lineNum">      34 </span><span class="lineCov">          1 :     self.datasource = [[TableViewDatasourceAndDelegate alloc] initListWithTableView:self.tableView storyIndex:index];</span>
+<span class="lineNum">      35 </span>            :     
+<span class="lineNum">      36 </span><span class="lineCov">          1 :     self.tableView.dataSource = self.datasource;</span>
+<span class="lineNum">      37 </span><span class="lineCov">          1 :     self.tableView.delegate = self.datasource;</span>
+<a name="38"><span class="lineNum">      38 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">      39 </span>            : 
+<span class="lineNum">      40 </span>            : - (void)viewDidLoad {
+<span class="lineNum">      41 </span><span class="lineCov">          1 :     [super viewDidLoad];</span>
+<span class="lineNum">      42 </span>            :     
+<span class="lineNum">      43 </span>            :     // receive notification
+<span class="lineNum">      44 </span><span class="lineCov">          1 :     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveMenuIndex:) name:kIndexMenuNotification object:nil];</span>
+<span class="lineNum">      45 </span>            :     
+<span class="lineNum">      46 </span><span class="lineCov">          1 :     [self setupTableViewWithIndex:@&quot;1&quot;];</span>
+<span class="lineNum">      47 </span>            :     
+<a name="48"><span class="lineNum">      48 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">      49 </span>            : 
+<span class="lineNum">      50 </span>            : - (void)receiveMenuIndex:(NSNotification *)notification {
+<span class="lineNum">      51 </span><span class="lineNoCov">          0 :     NSNumber *categoryId = [notification.userInfo objectForKey:kIndexMenu];</span>
+<span class="lineNum">      52 </span>            :     
+<span class="lineNum">      53 </span><span class="lineNoCov">          0 :     [self setupTableViewWithIndex:categoryId.stringValue];</span>
+<span class="lineNum">      54 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      55 </span>            : 
+<span class="lineNum">      56 </span>            : @end
 </pre>
       </td>
     </tr>
