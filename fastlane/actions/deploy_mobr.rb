@@ -46,6 +46,10 @@ module Fastlane
         JSON.parse(response)['id']
       end
 
+        def self.step_text
+            "Running deploy to mobr"
+        end
+
       def self.upload_file(release_id)
         url = upload_file_url(release_id)
         file_name = fetch_file_name
