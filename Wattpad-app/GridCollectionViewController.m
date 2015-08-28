@@ -7,8 +7,11 @@
 //
 
 #import "GridCollectionViewController.h"
+#import "CollectionViewDatasourceAndDelegate.h"
 
 @interface GridCollectionViewController ()
+
+@property (nonatomic, strong) CollectionViewDatasourceAndDelegate *dataSourceDelegate;
 
 @end
 
@@ -18,6 +21,13 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    self.dataSourceDelegate = [[CollectionViewDatasourceAndDelegate alloc] initWithCollectionView:self.collectionView];
+    self.collectionView.delegate = self.dataSourceDelegate;
+    self.collectionView.dataSource = self.dataSourceDelegate;
+    
+    [self.collectionView reloadData];
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;

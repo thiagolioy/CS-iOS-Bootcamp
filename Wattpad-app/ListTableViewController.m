@@ -10,6 +10,7 @@
 #import "Client.h"
 #import "TableViewDatasourceAndDelegate.h"
 #import "MenuViewController.h"
+#import <NSLogPrinter.h>
 
 static NSString *const kNibIdentifier = @"PopularShotsTableViewCell";
 static NSString *const kCellIdentifier = @"cardShotCell";
@@ -38,7 +39,6 @@ static NSString *const kCellIdentifier = @"cardShotCell";
     
     self.menuDelegate = [MenuViewController new];
     self.menuDelegate.delegate = self;
-    
 }
 
 - (void)viewDidLoad {

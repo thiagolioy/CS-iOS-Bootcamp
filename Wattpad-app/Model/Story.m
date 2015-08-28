@@ -31,8 +31,21 @@
     return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
 
-+ (NSValueTransformer *)storyCategoriesJSONTransformer {
-    return [MTLJSONAdapter dictionaryTransformerWithModelClass:[StoryCategory class]];
++ (NSValueTransformer *)storyCreateDateJSONTransformer {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *dateString, BOOL *success, NSError *__autoreleasing *error) {
+        return [self.dateFormatter dateFromString:dateString];
+    } reverseBlock:^id(NSDate *date, BOOL *success, NSError *__autoreleasing *error) {
+        return [self.dateFormatter stringFromDate:date];
+    }];
 }
+
++ (NSDateFormatter *)dateFormatter {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    dateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss'Z'";
+    return dateFormatter;
+}
+
+
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "Stories.h"
+#import "Story.h"
 
 @implementation Stories
 

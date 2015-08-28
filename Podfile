@@ -7,6 +7,8 @@ pod "AFNetworking", "~> 2.0"
 pod "Mantle"
 pod 'SDWebImage', '~>3.7'
 pod 'HMSegmentedControl'
+pod 'podtest-ios'
+pod 'Parse'
 
 end
 
@@ -18,4 +20,3 @@ pod 'Specta', '~> 1.0'
 pod 'TLJsonFactory'
 
 end
-

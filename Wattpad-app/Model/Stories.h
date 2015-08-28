@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Mantle.h"
-#import "Story.h"
+#import "BaseMantleObj.h"
 
-@interface Stories : MTLModel <MTLJSONSerializing>
+
+@interface Stories : BaseMantleObj
 
 @property (nonatomic, assign) NSInteger storiesTotal;
 @property (nonatomic, strong) NSArray *stories;

@@ -9,7 +9,7 @@ platform :ios do
     # Não vai ser rodado enquanto estivermos versionando o pods por questoes de ambiente e redes
     clean_derived_data
     cocoapods
-    
+
   end
 
   def clean_derived_data
@@ -55,9 +55,9 @@ platform :ios do
 
 
 
-    # applink = deploy_mobr
+    applink = deploy_mobr
 
-    # mailit(applink)
+    mailit(applink)
   end
 
   def mailit(applink)
