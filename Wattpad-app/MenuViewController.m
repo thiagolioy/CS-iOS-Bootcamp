@@ -7,13 +7,15 @@
 //
 
 #import "MenuViewController.h"
-#import "ListTableViewController.h"
+#import "SegmentedControlHelper.h"
+#import "Client.h"
+#import "StoryCategory.h"
 
-
-@interface MenuViewController ()
+@interface MenuViewController () <SegmentedControlHelperDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *viewMenu;
-@property (strong, nonatomic) HMSegmentedControl *segmentedControl;
+@property (strong, nonatomic) SegmentedControlHelper *segmentedControlHelper;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -22,28 +24,55 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self retrieveCategories];
+}
+//
+//- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+//    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+//    if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)){
+//        self.segmentedControl.frame = self.viewMenu.frame;
+//        
+//    }
+//    else if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation)){
+//        self.segmentedControl.frame = self.viewMenu.frame;
+//    }
+//}
 
-    // Segmented control with scrolling
-    self.segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"One", @"Two", @"Three", @"Four", @"Five", @"Six", @"Seven", @"Eight"]];
-    self.segmentedControl.frame = self.viewMenu.frame;
+- (void)setupSegmentedMenuWithCategories:(NSArray *)categories {
     
-    [self.segmentedControl addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
-    [self.viewMenu addSubview:self.segmentedControl];
-}
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-    if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)){
-        self.segmentedControl.frame = self.viewMenu.frame;
-        
+    // iterate categories to find category name
+    __block NSMutableArray *mtArray = [NSMutableArray new];
+    for (StoryCategory *category in categories) {
+        [mtArray addObject:category.categoryName];
     }
-    else if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation)){
-        self.segmentedControl.frame = self.viewMenu.frame;
+    
+    self.segmentedControlHelper = [[SegmentedControlHelper alloc] initWithView:self.viewMenu titleArray:mtArray];
+    self.segmentedControlHelper.delegate = self;
+}
+
+#pragma mark - SegmentedControlHelperDelegate
+
+- (void)didSelectWithIndex:(NSInteger)index {
+    if ([self.delegate respondsToSelector:@selector(didSelectWithIndex:)]) {
+        [self.delegate didSelectedIndex:index];
     }
 }
 
-- (void)segmentedControlChangedValue:(HMSegmentedControl *)segmentedControl {
-    NSLog(@"Selected index %ld (via UIControlEventValueChanged)", (long)segmentedControl.selectedSegmentIndex);
-}
+#pragma mark - Client Methods
 
+-(void)retrieveCategories {
+    
+    [self.activityIndicator setHidden:NO];
+    [self.activityIndicator startAnimating];
+    
+    [[Client sharedInstance] getWattPadCategoriesWithSuccess:^(NSArray *categories) {
+        //NSLog(@"%@", categories.description);
+        [self setupSegmentedMenuWithCategories:categories];
+        [self.activityIndicator stopAnimating];
+        [self.activityIndicator setHidden:YES];
+    } andFailure:^(NSError *error) {
+        NSLog(@"%@", error.description);
+    }];
+    
+}
 @end

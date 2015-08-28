@@ -16,14 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XJI-DW-Rnm">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XJI-DW-Rnm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XJI-DW-Rnm" secondAttribute="bottom" id="F8e-yO-Z5E"/>
+                            <constraint firstItem="XJI-DW-Rnm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZUY-eW-sko"/>
+                            <constraint firstAttribute="trailing" secondItem="XJI-DW-Rnm" secondAttribute="trailing" id="dGO-Mo-DV3"/>
+                            <constraint firstItem="XJI-DW-Rnm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="o34-oh-XyR"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lista" id="lZC-Oz-NNI"/>
+                    <connections>
+                        <outlet property="tableView" destination="XJI-DW-Rnm" id="hla-RS-qCH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,7 +82,6 @@
         <!--Container View Controller-->
         <scene sceneID="BQc-mZ-mzn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cDs-Gc-wmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="6f1-NE-NfW" customClass="ContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MYh-Yc-pVl"/>
@@ -111,6 +119,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cDs-Gc-wmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-399" y="443"/>
         </scene>
@@ -147,7 +156,16 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bv-hk-bK9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="NM3-PT-krM">
+                                        <rect key="frame" x="197" y="12" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="NM3-PT-krM" firstAttribute="centerY" secondItem="6bv-hk-bK9" secondAttribute="centerY" id="XLk-8K-J2d"/>
+                                    <constraint firstItem="NM3-PT-krM" firstAttribute="centerX" secondItem="6bv-hk-bK9" secondAttribute="centerX" id="tYU-U6-PJX"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -160,6 +178,7 @@
                     </view>
                     <toolbarItems/>
                     <connections>
+                        <outlet property="activityIndicator" destination="NM3-PT-krM" id="WWz-UH-8mI"/>
                         <outlet property="viewMenu" destination="6bv-hk-bK9" id="fxs-nf-usv"/>
                     </connections>
                 </viewController>

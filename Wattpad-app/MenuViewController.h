@@ -8,8 +8,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HMSegmentedControl.h"
+
+@protocol MenuViewControllerDelegate <NSObject>
+
+- (void)didSelectedIndex:(NSInteger)index;
+
+@end
 
 @interface MenuViewController : UIViewController
+
+@property (nonatomic, weak) id<MenuViewControllerDelegate> delegate;
 
 @end

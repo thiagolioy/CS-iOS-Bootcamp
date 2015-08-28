@@ -9,10 +9,13 @@
 #import "ListTableViewController.h"
 #import "Client.h"
 #import "TableViewDatasourceAndDelegate.h"
+#import "MenuViewController.h"
 
-@interface ListTableViewController ()
+@interface ListTableViewController () <MenuViewControllerDelegate>
 
 @property (strong, nonatomic) TableViewDatasourceAndDelegate *datasource;
+@property (strong, nonatomic) MenuViewController *menuDelegate;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -28,16 +31,9 @@
     
     self.tableView.dataSource = self.datasource;
     self.tableView.delegate = self.datasource;
+    self.menuDelegate.delegate = self;
     
     [self.tableView reloadData];
-//
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    [self getCategories];
     
 }
 
@@ -46,18 +42,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - MenuViewControllerDelegate
 
-
-#pragma mark - Actions
-
--(void)getCategories {
-    
-    [[Client sharedInstance] getWattPadCategoriesWithSuccess:^(NSArray *categories) {
-        NSLog(@"%@", categories.description);
-    } andFailure:^(NSError *error) {
-        NSLog(@"%@", error.description);
-    }];
+- (void)didSelectedIndex:(NSInteger)index {
     
 }
-
 @end
