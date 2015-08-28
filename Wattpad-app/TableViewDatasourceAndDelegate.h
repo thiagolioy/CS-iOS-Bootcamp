@@ -11,6 +11,7 @@
 
 @interface TableViewDatasourceAndDelegate : NSObject <UITableViewDelegate, UITableViewDataSource>
 
-- (instancetype)initWithTableView:(UITableView *)tableView storyIndex:(NSInteger)index;
+- (instancetype)initListWithTableView:(UITableView *)tableView storyIndex:(NSString *)index;
 
+- (instancetype)initGridWithTableView:(UITableView *)tableView storyIndex:(NSString *)index;
 @end

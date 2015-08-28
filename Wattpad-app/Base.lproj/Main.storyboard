@@ -16,18 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="320" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XJI-DW-Rnm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="320" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XJI-DW-Rnm">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="128" id="PFG-ya-eD3">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PFG-ya-eD3" id="pXQ-Ez-ZBo">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                                 </variation>
@@ -62,28 +53,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sCP-xp-vMo">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="628"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="imx-ai-Ktb">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qOL-2u-vRx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="sCP-xp-vMo" secondAttribute="bottom" constant="44" id="BJc-Rt-HUx"/>
-                            <constraint firstItem="sCP-xp-vMo" firstAttribute="leading" secondItem="GAt-S8-OXO" secondAttribute="leading" id="PAh-Im-ylf"/>
-                            <constraint firstAttribute="trailing" secondItem="sCP-xp-vMo" secondAttribute="trailing" id="Srb-2c-YXQ"/>
-                            <constraint firstItem="sCP-xp-vMo" firstAttribute="top" secondItem="lf4-qp-gh8" secondAttribute="bottom" id="xzk-c0-yDg"/>
+                            <constraint firstItem="qOL-2u-vRx" firstAttribute="top" secondItem="lf4-qp-gh8" secondAttribute="bottom" id="H3F-F8-DOf"/>
+                            <constraint firstAttribute="bottom" secondItem="qOL-2u-vRx" secondAttribute="bottom" id="bC6-pS-aaD"/>
+                            <constraint firstAttribute="trailing" secondItem="qOL-2u-vRx" secondAttribute="trailing" id="hvU-kD-C1c"/>
+                            <constraint firstItem="qOL-2u-vRx" firstAttribute="leading" secondItem="GAt-S8-OXO" secondAttribute="leading" id="q45-sE-iAo"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Grid" id="m4i-aJ-fiU"/>
                     <connections>
-                        <outlet property="collectionView" destination="sCP-xp-vMo" id="EbR-qq-Ca8"/>
+                        <outlet property="tableView" destination="qOL-2u-vRx" id="oqI-c3-Gap"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVE-c5-Mxa" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -22,21 +22,21 @@
     // Configure the view for the selected state
 }
 
-//- (void)updateInterfaceWithShot:(Shot *)shot {
-//    __weak typeof(self) weakSelf = self;
-//    
-//    [weakSelf.activityIndicator setHidden:NO];
-//    [weakSelf.activityIndicator startAnimating];
-//    
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [weakSelf.photoImageView sd_setImageWithURL:shot.photoURL completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-//            [weakSelf.activityIndicator stopAnimating];
-//            [weakSelf.activityIndicator setHidden:YES];
-//        }];
-//    });
-//    
-//    weakSelf.photoTitle.text = [shot.title capitalizedString];
-//    weakSelf.viewsCount.text = [NSString stringWithFormat:@"%ld", shot.viewsCount];
-//}
+- (void)updateInterfaceWithStory:(Story *)story {
+    __weak typeof(self) weakSelf = self;
+    
+    [weakSelf.activityIndicator setHidden:NO];
+    [weakSelf.activityIndicator startAnimating];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [weakSelf.photoImageView sd_setImageWithURL:story.storyCoverURL completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            [weakSelf.activityIndicator stopAnimating];
+            [weakSelf.activityIndicator setHidden:YES];
+        }];
+    });
+    
+    weakSelf.photoTitle.text = [story.storyTitle capitalizedString];
+    weakSelf.viewsCount.text = [NSString stringWithFormat:@"%ld", story.storyVoteCount];
+}
 
 @end

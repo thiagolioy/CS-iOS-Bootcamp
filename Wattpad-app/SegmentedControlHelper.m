@@ -22,6 +22,7 @@
         
         // Segmented control with scrolling
         self.segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:array];
+        self.segmentedControl.selectionStyle = HMSegmentedControlBorderTypeBottom;
         self.segmentedControl.frame = view.frame;
         [self.segmentedControl addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
         [view addSubview:self.segmentedControl];
@@ -31,10 +32,8 @@
 
 - (void)segmentedControlChangedValue:(HMSegmentedControl *)segmentedControl {
     //NSLog(@"Selected index %ld (via UIControlEventValueChanged)", (long)segmentedControl.selectedSegmentIndex);
-    
     if ([self.delegate respondsToSelector:@selector(didSelectTextWithIndex:)]) {
         [self.delegate didSelectTextWithIndex:segmentedControl.selectedSegmentIndex];
-        
     }
     
 }

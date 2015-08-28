@@ -8,6 +8,14 @@
 
 #import "ContainerViewController.h"
 
+@interface ContainerViewController ()
+
+@end
+
 @implementation ContainerViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+}
 
 @end

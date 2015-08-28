@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Story.h"
 
 @interface PopularShotsTableViewCell : UITableViewCell
 
@@ -15,6 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *viewsCount;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
-//- (void)updateInterfaceWithShot:(Shot *)shot;
+- (void)updateInterfaceWithStory:(Story *)story;
 
 @end

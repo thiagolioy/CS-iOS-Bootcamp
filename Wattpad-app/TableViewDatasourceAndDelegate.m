@@ -8,24 +8,59 @@
 
 #import "TableViewDatasourceAndDelegate.h"
 #import "PopularShotsTableViewCell.h"
+#import "Client.h"
+#import "Stories.h"
+#import "Story.h"
 
-static NSString *const kCellIdentifier = @"cardShotCell";
+static NSString *const kCellListIdentifier = @"cardShotCell";
+static NSString *const kCellGridIdentifier = @"gridCell";
 
 @interface TableViewDatasourceAndDelegate ()
-@property(nonatomic,weak) UITableView *tableView;
+@property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, strong) NSString *cellIdentifier;
+
+@property (nonatomic, strong) Stories *stories;
+
 @end
 
 @implementation TableViewDatasourceAndDelegate
 
-- (instancetype)initWithTableView:(UITableView *)tableView storyIndex:(NSInteger)index {
+- (instancetype)initListWithTableView:(UITableView *)tableView storyIndex:(NSString *)index {
     
     self = [super init];
     if (self) {
         self.tableView = tableView;
+        self.cellIdentifier = kCellListIdentifier;
+        
+        [self retrieveStoriesWithIndex:index];
     }
     return self;
 }
 
+- (instancetype)initGridWithTableView:(UITableView *)tableView storyIndex:(NSString *)index {
+    
+    self = [super init];
+    if (self) {
+        self.tableView = tableView;
+        self.cellIdentifier = kCellGridIdentifier;
+        
+        [self retrieveStoriesWithIndex:index];
+    }
+    return self;
+}
+
+- (void)retrieveStoriesWithIndex:(NSString *)index {
+    __weak typeof(self) weakSelf = self;
+    
+    [[Client sharedInstance] getWattPadStoriesForCategory:index andPage:index withSuccess:^(Stories *stories) {
+        weakSelf.stories = stories;
+        
+        [weakSelf.tableView reloadData];
+    } andFailure:^(NSError *error) {
+    }];
+}
+
+#pragma mark - UITableView Datasource/Delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
@@ -34,15 +69,15 @@ static NSString *const kCellIdentifier = @"cardShotCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 5;
+    return [self.stories.stories count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    PopularShotsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
+    PopularShotsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier forIndexPath:indexPath];
     
-    //Shot *shot = [self.dribbbleTO.shotsArray objectAtIndex:indexPath.row];
-    //[cell updateInterfaceWithShot:shot];
+    Story *story = [self.stories.stories objectAtIndex:indexPath.row];
+    [cell updateInterfaceWithStory:story];
     
     return cell;
 }

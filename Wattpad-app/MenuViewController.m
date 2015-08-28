@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIView *viewMenu;
 @property (strong, nonatomic) SegmentedControlHelper *segmentedControlHelper;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (strong, nonatomic) NSArray *categories;
 
 @end
 
@@ -42,9 +43,12 @@
 #pragma mark - SegmentedControlHelperDelegate
 
 - (void)didSelectTextWithIndex:(NSInteger)index {
-    if ([self.delegate respondsToSelector:@selector(didClickInTextWithIndex:)]) {
-        [self.delegate didClickInTextWithIndex:index];
-    }
+    
+    StoryCategory *category = [self.categories objectAtIndex:index];
+    
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:category.categoryId] forKey:kIndexMenu];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kIndexMenuNotification object:nil userInfo:userInfo];
+
 }
 
 #pragma mark - Client Methods
@@ -56,6 +60,8 @@
     
     [[Client sharedInstance] getWattPadCategoriesWithSuccess:^(NSArray *categories) {
         [self setupSegmentedMenuWithCategories:categories];
+        self.categories = categories;
+        
         [self.activityIndicator stopAnimating];
         [self.activityIndicator setHidden:YES];
     } andFailure:^(NSError *error) {

@@ -7,6 +7,7 @@
 //
 
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
+#import "Stories.h"
 
 @interface Client : AFHTTPRequestOperationManager
 
@@ -14,5 +15,7 @@
 
 -(void)getWattPadCategoriesWithSuccess:(void (^)(NSArray *categories))success
                             andFailure:(void (^)(NSError *error))failure;
+
+-(void)getWattPadStoriesForCategory:(NSString *)category andPage:(NSString *)page withSuccess:(void (^)(Stories *stories))success andFailure:(void (^)(NSError *error))failure;
 
 @end

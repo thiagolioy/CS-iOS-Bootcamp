@@ -9,14 +9,10 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol MenuViewControllerDelegate <NSObject>
 
-- (void)didClickInTextWithIndex:(NSInteger)index;
-
-@end
+static NSString *const kIndexMenuNotification = @"IndexMenuNotification";
+static NSString *const kIndexMenu = @"IndexMenu";
 
 @interface MenuViewController : UIViewController
-
-@property (weak, nonatomic) id<MenuViewControllerDelegate> delegate;
 
 @end
