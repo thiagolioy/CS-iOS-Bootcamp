@@ -32,6 +32,7 @@ static NSString *const kCellGridIdentifier = @"gridCell";
         self.tableView = tableView;
         self.cellIdentifier = kCellListIdentifier;
         
+        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
         [self retrieveStoriesWithIndex:index];
     }
     return self;
@@ -44,6 +45,7 @@ static NSString *const kCellGridIdentifier = @"gridCell";
         self.tableView = tableView;
         self.cellIdentifier = kCellGridIdentifier;
         
+        self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         [self retrieveStoriesWithIndex:index];
     }
     return self;
