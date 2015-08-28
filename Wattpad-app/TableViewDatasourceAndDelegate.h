@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface TableViewDatasourceAndDelegate : NSObject<UITableViewDelegate,UITableViewDataSource>
-- (instancetype)initWithTableView:(UITableView *)tableView ;
+@interface TableViewDatasourceAndDelegate : NSObject <UITableViewDelegate, UITableViewDataSource>
+
+- (instancetype)initWithTableView:(UITableView *)tableView storyIndex:(NSInteger)index;
+
 @end

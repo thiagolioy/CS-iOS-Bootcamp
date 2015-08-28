@@ -7,6 +7,9 @@
 //
 
 #import "TableViewDatasourceAndDelegate.h"
+#import "PopularShotsTableViewCell.h"
+
+static NSString *const kCellIdentifier = @"cardShotCell";
 
 @interface TableViewDatasourceAndDelegate ()
 @property(nonatomic,weak) UITableView *tableView;
@@ -14,7 +17,7 @@
 
 @implementation TableViewDatasourceAndDelegate
 
-- (instancetype)initWithTableView:(UITableView *)tableView {
+- (instancetype)initWithTableView:(UITableView *)tableView storyIndex:(NSInteger)index {
     
     self = [super init];
     if (self) {
@@ -36,12 +39,10 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    PopularShotsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
     
-    cell.backgroundColor = [UIColor blackColor];
-    // Configure the cell...
-    
-    cell.textLabel.text = @"";
+    //Shot *shot = [self.dribbbleTO.shotsArray objectAtIndex:indexPath.row];
+    //[cell updateInterfaceWithShot:shot];
     
     return cell;
 }

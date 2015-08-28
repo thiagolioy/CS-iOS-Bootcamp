@@ -11,6 +11,9 @@
 #import "TableViewDatasourceAndDelegate.h"
 #import "MenuViewController.h"
 
+static NSString *const kNibIdentifier = @"PopularShotsTableViewCell";
+static NSString *const kCellIdentifier = @"cardShotCell";
+
 @interface ListTableViewController () <MenuViewControllerDelegate>
 
 @property (strong, nonatomic) TableViewDatasourceAndDelegate *datasource;
@@ -24,27 +27,30 @@
 
 #pragma mark - Life Cycle
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)setupTableView {
+    UINib *nib = [UINib nibWithNibName:kNibIdentifier bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
     
     self.datasource = [[TableViewDatasourceAndDelegate alloc] initWithTableView:self.tableView];
     
     self.tableView.dataSource = self.datasource;
     self.tableView.delegate = self.datasource;
-    self.menuDelegate.delegate = self;
     
-    [self.tableView reloadData];
+    self.menuDelegate = [MenuViewController new];
+    self.menuDelegate.delegate = self;
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self setupTableView];
+    
 }
 
 #pragma mark - MenuViewControllerDelegate
 
-- (void)didSelectedIndex:(NSInteger)index {
-    
+- (void)didClickInTextWithIndex:(NSInteger)index {
+    NSLog(@"NOIS");
 }
 @end

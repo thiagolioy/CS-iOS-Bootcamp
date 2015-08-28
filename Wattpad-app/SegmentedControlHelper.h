@@ -11,7 +11,7 @@
 
 @protocol SegmentedControlHelperDelegate <NSObject>
 
-- (void)didSelectWithIndex:(NSInteger)index;
+- (void)didSelectTextWithIndex:(NSInteger)index;
 
 @end
 

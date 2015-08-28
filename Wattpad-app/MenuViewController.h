@@ -11,12 +11,12 @@
 
 @protocol MenuViewControllerDelegate <NSObject>
 
-- (void)didSelectedIndex:(NSInteger)index;
+- (void)didClickInTextWithIndex:(NSInteger)index;
 
 @end
 
 @interface MenuViewController : UIViewController
 
-@property (nonatomic, weak) id<MenuViewControllerDelegate> delegate;
+@property (weak, nonatomic) id<MenuViewControllerDelegate> delegate;
 
 @end

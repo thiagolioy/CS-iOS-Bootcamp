@@ -26,7 +26,6 @@
 		7BB57A501B8B54A300A2C357 /* StoryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB57A4F1B8B54A300A2C357 /* StoryCategory.m */; };
 		7BB57A531B8B5A3800A2C357 /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB57A521B8B5A3800A2C357 /* Story.m */; };
 		7BB57A561B8B754C00A2C357 /* Stories.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB57A551B8B754C00A2C357 /* Stories.m */; };
-		7BD69FFC1B8CB16B0048B687 /* TableViewDataSourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD69FFB1B8CB16B0048B687 /* TableViewDataSourceDelegate.m */; };
 		7BD69FFF1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD69FFE1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m */; };
 		7BD6A0011B8CED250048B687 /* stories.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD6A0001B8CED250048B687 /* stories.json */; };
 		7BD6A0031B8CED970048B687 /* story.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD6A0021B8CED970048B687 /* story.json */; };
@@ -80,8 +79,6 @@
 		7BB57A521B8B5A3800A2C357 /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 		7BB57A541B8B754C00A2C357 /* Stories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stories.h; sourceTree = "<group>"; };
 		7BB57A551B8B754C00A2C357 /* Stories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stories.m; sourceTree = "<group>"; };
-		7BD69FFA1B8CB16B0048B687 /* TableViewDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDataSourceDelegate.h; sourceTree = "<group>"; };
-		7BD69FFB1B8CB16B0048B687 /* TableViewDataSourceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSourceDelegate.m; sourceTree = "<group>"; };
 		7BD69FFD1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDatasourceAndDelegate.h; sourceTree = "<group>"; };
 		7BD69FFE1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDatasourceAndDelegate.m; sourceTree = "<group>"; };
 		7BD6A0001B8CED250048B687 /* stories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stories.json; sourceTree = "<group>"; };
@@ -304,8 +301,6 @@
 		7BD69FF61B8CAFF20048B687 /* DataSourceDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				7BD69FFA1B8CB16B0048B687 /* TableViewDataSourceDelegate.h */,
-				7BD69FFB1B8CB16B0048B687 /* TableViewDataSourceDelegate.m */,
 				7BD69FFD1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.h */,
 				7BD69FFE1B8CDA2D0048B687 /* TableViewDatasourceAndDelegate.m */,
 			);
@@ -527,7 +522,6 @@
 				7BB57A561B8B754C00A2C357 /* Stories.m in Sources */,
 				39C9221F1B9098C1002A4AA9 /* SegmentedControlHelper.m in Sources */,
 				398574551B8B60EC0036C3B7 /* ListTableViewController.m in Sources */,
-				7BD69FFC1B8CB16B0048B687 /* TableViewDataSourceDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

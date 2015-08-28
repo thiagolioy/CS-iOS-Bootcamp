@@ -26,17 +26,6 @@
     // Do any additional setup after loading the view.
     [self retrieveCategories];
 }
-//
-//- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
-//    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-//    if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)){
-//        self.segmentedControl.frame = self.viewMenu.frame;
-//        
-//    }
-//    else if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation)){
-//        self.segmentedControl.frame = self.viewMenu.frame;
-//    }
-//}
 
 - (void)setupSegmentedMenuWithCategories:(NSArray *)categories {
     
@@ -52,9 +41,9 @@
 
 #pragma mark - SegmentedControlHelperDelegate
 
-- (void)didSelectWithIndex:(NSInteger)index {
-    if ([self.delegate respondsToSelector:@selector(didSelectWithIndex:)]) {
-        [self.delegate didSelectedIndex:index];
+- (void)didSelectTextWithIndex:(NSInteger)index {
+    if ([self.delegate respondsToSelector:@selector(didClickInTextWithIndex:)]) {
+        [self.delegate didClickInTextWithIndex:index];
     }
 }
 
@@ -66,7 +55,6 @@
     [self.activityIndicator startAnimating];
     
     [[Client sharedInstance] getWattPadCategoriesWithSuccess:^(NSArray *categories) {
-        //NSLog(@"%@", categories.description);
         [self setupSegmentedMenuWithCategories:categories];
         [self.activityIndicator stopAnimating];
         [self.activityIndicator setHidden:YES];
@@ -75,4 +63,16 @@
     }];
     
 }
+
+//- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+//    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+//    if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)){
+//        self.segmentedControl.frame = self.viewMenu.frame;
+//
+//    }
+//    else if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation)){
+//        self.segmentedControl.frame = self.viewMenu.frame;
+//    }
+//}
+
 @end

@@ -30,10 +30,10 @@
 }
 
 - (void)segmentedControlChangedValue:(HMSegmentedControl *)segmentedControl {
-    NSLog(@"Selected index %ld (via UIControlEventValueChanged)", (long)segmentedControl.selectedSegmentIndex);
-
-    if ([self.delegate respondsToSelector:@selector(didSelectWithIndex:)]) {
-        [self.delegate didSelectWithIndex:segmentedControl.selectedSegmentIndex];
+    //NSLog(@"Selected index %ld (via UIControlEventValueChanged)", (long)segmentedControl.selectedSegmentIndex);
+    
+    if ([self.delegate respondsToSelector:@selector(didSelectTextWithIndex:)]) {
+        [self.delegate didSelectTextWithIndex:segmentedControl.selectedSegmentIndex];
         
     }
     
